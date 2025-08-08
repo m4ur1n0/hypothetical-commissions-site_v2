@@ -1,103 +1,93 @@
-import Image from "next/image";
+
+import Carousel from "./components/Carousel";
+import ImageWithZoom from "./components/ImageWithZoom";
+import "./globals.css";
+
+
+export async function generateMetadata({ params }) {
+  return {
+    title: "Home: Theo Maurino"
+  };
+}
+
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    const imageUrls = [
+        "/assets/images/algorithm-visualizer.png",
+        "/assets/images/catan.png",
+        "/assets/images/gym-buddies.png",
+        "/assets/images/locket.png",
+        "/assets/images/portfolio.png",
+    ]
+
+  return (
+    <>
+       {/* <!-- ACTUAL MAIN CONTENT OF THE PAGE --> */}
+        <main>
+            
+            {/* <!-- THE HEADER SECTION -- IINTRODUCTION TO THE PAGE --> */}
+            <section id="entrance">
+                <header>
+
+                    {/* <!-- EVENTUALLY WE'LL MAKE THIS A CAROUSEL -- RN JUST LOAD AN IMAGE --> */}
+                    {/* <!-- <img src="https://placehold.co/600x400" alt="An example of a product or project built by me!"> --> */}
+                    {/* <img src="assets/images/catan.png" alt="An example of a simple product or project built by Theo Maurino!" /> */}
+
+                    <Carousel images={imageUrls} />
+
+
+                    <a href="#bio-section">
+                        <h1>Theo Maurino, demos and commissions</h1>
+                    </a>
+                    <p>Freelance fullstack engineer</p>
+
+                </header>
+            </section>
+
+            {/* <!-- BIO SECTION, DESCRIBE ME AND MY SHIT --> */}
+            <section id="bio-section">
+
+                <div id="bio-section-content">
+                    <div id="bio-section-left-half">
+                        <h2 id="bio-name">Theo Maurino</h2>
+                        <p>
+                            <a id="bio-email" target="_blank" href="mailto:thjmaurino@gmail.com">thjmaurino (at) gmail (dot) com <img src="assets/vectors/click.svg" alt="clicking icon" id="clicking-icon" /></a>
+                        </p>
+
+                        {/* <!-- SOME GENERAL INFORMATION ABOUT ME --> */}
+                        <p id="bio-info">
+                            Hi! My name is Theo Maurino, and I want to build your next software product! I'm an experienced full-stack developer, you can tell because I'm currently enrolled in an introductory level web development course. Jokes aside, I've been coding for over a decade, and I'm more than confident I can take on your next project! Don't believe me? Check out some of my other projects on my <a href="demos.html">demos</a> page!
+                        </p>
+
+                        <div id="social-media-links">
+                            <a target="_blank" href="https://www.twitter.com/theomaurino"><img src="/assets/vectors/twitter.svg" alt="Twitter Logo" className="social-media-logo" /></a>
+                            <a target="_blank" href="https://github.com/m4ur1n0"><img src="/assets/vectors/github.svg" alt="GitHub Logo" className="social-media-logo" /></a>
+                            <a target="_blank" href="https://linkedin.com/theo-maurino"><img src="/assets/vectors/linkedin.svg" alt="LinkedIn Logo" className="social-media-logo" /></a>
+                        </div>
+                    </div>
+
+                    <div id="bio-section-right-half">
+                        {/* <img src="/assets/images/theo-headshot.jpg" alt="A headshot of Theo Maurino" loading="lazy" /> */}
+                        <ImageWithZoom src={"/assets/images/theo-headshot.jpg"} alt="A headshot of Theo Maurino" loading="lazy" />
+                    </div>
+                </div>
+
+                <div id="bio-section-forward-links">
+                    <a href="demos.html">
+                        <button className="forward-link-button" type="button">Explore Demos</button>
+                    </a>
+
+                    <a href="commission.html">
+                        <button className="forward-link-button" type="button">Commission Something</button>
+                    </a>
+                </div>
+
+            </section>
+
+        </main>
+        
+        {/* <script src="scripts/customizer.js" defer></script> */}
+    </>
   );
 }
