@@ -57,7 +57,7 @@ export default function Home() {
 
                         {/* <!-- SOME GENERAL INFORMATION ABOUT ME --> */}
                         <p id="bio-info">
-                            Hi! My name is Theo Maurino, and I want to build your next software product! I'm an experienced full-stack developer, you can tell because I'm currently enrolled in an introductory level web development course. Jokes aside, I've been coding for over a decade, and I'm more than confident I can take on your next project! Don't believe me? Check out some of my other projects on my <a href="demos.html">demos</a> page!
+                            Hi! My name is Theo Maurino, and I want to build your next software product! I&apos;m an experienced full-stack developer, you can tell because I&apos;m currently enrolled in an introductory level web development course. Jokes aside, I&apos;ve been coding for over a decade, and I&apos;m more than confident I can take on your next project! Don&apos;t believe me? Check out some of my other projects on my <a href="demos.html">demos</a> page!
                         </p>
 
                         <div id="social-media-links">
