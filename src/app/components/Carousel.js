@@ -26,7 +26,7 @@ export default function Carousel({images}) {
       {images.map((src, i) => (
         <SwiperSlide key={i}>
             <div className='swiper-slide-div'>
-                <img src={src} alt={`slide-${i} displaying one of TM's past projects, called ${src}`} />
+                <img src={src} alt={`slide-${i} displaying a past project by TM, called ${src}`} />
             </div>
         </SwiperSlide>
       ))}

@@ -62,7 +62,7 @@ const page = () => {
                 <a href="https://www.theomaurino.com" target="_blank" className="demo-card-link">
                     <div className="demo-card">
                         <img src="assets/images/portfolio.png" alt="Theo Maurino's personal portfolio site." />
-                        <h3>Theo Maurino's Personal Portfolio</h3>
+                        <h3>Theo Maurino&apos;s Personal Portfolio</h3>
                         <p>A web page to display my past personal projects, work history, and course history.</p>
                     </div>
                 </a>
